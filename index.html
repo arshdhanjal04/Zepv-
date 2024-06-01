@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Zepvï</h1>
+        <div id="search">
+            <!-- <label for="search-input">Search:</label> -->
+            <input type="text" id="search-input" oninput="filterProducts()" placeholder="Search">
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Filters</h2>
+            <div class="filter">
+                <i class="fas fa-tags"></i>
+                <label for="brand">Brand:</label>
+                <select id="brand" onchange="filterProducts()">
+                    <option value="all">All</option>
+                    <option value="Mango">Mango</option>
+                    <option value="H&M">H&M</option>
+                </select>
+            </div>
+            <div class="filter">
+                <i class="fas fa-dollar-sign"></i>
+                <label for="price-range">Price:</label>
+                <select id="price-range" onchange="filterProducts()">
+                    <option value="all">All</option>
+                    <option value="0-500">0 - 500</option>
+                    <option value="501 - 3000">501 - 3000</option>
+                </select>
+            </div>
+            <div class="filter">
+                <i class="fas fa-star"></i>
+                <label for="ratings">Ratings:</label>
+                <select id="ratings" onchange="filterProducts()">
+                    <option value="all">All</option>
+                    <option value="4-up">4 Stars & Up</option>
+                    <option value="3-up">3 Stars & Up</option>
+                    <option value="2-up">2 Stars & Up</option>
+                </select>
+            </div>
+            
+        </aside>
+        <main id="product-list">
+            <!-- Products will be listed here -->
+        </main>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
